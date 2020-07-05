@@ -21,7 +21,15 @@ public abstract class Vehicle {
 
     abstract void addVehicle(Vehicle newVehicle);
 
-    abstract void removeVehicle(int model_number);
+    static void removeVehicle(int modelNumber) {
+        for(int i=0; i<allVehicle.size(); i++) {
+            Vehicle v = allVehicle.get(i);
+            if(v.modelNumber == modelNumber) {
+                allVehicle.remove(i);
+                break;
+            }
+        }
+    }
 
     static void showVehicle() {
         for(Vehicle v : allVehicle) {

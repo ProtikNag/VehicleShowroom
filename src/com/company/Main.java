@@ -4,6 +4,8 @@ import com.company.Heavy;
 import com.company.Normal;
 import com.company.Vehicle;
 
+import javax.swing.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -22,5 +24,10 @@ public class Main {
 
         Vehicle.showVehicle();
         Vehicle.showVisitorCount();
+
+        System.out.println("\n\n");
+
+        Vehicle.removeVehicle(6);
+        Vehicle.showVehicle();
     }
 }

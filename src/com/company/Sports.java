@@ -13,9 +13,4 @@ public class Sports extends Vehicle{
     void addVehicle(Vehicle newVehicle) {
         Vehicle.allVehicle.add(newVehicle);
     }
-
-    @Override
-    void removeVehicle(int model_number) {
-
-    }
 }
