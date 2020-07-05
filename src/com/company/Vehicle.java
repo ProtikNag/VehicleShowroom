@@ -1,9 +1,11 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public abstract class Vehicle {
     protected int modelNumber, enginePower, tireSize;
     protected String engineType, vehicleType;
-    protected static Vehicle allVehicle[] = new Vehicle[100000];
+    protected static ArrayList<Vehicle> allVehicle = new ArrayList<Vehicle>();
     protected static int visitorsCount = 30;
 
     Vehicle(String vehicleType, int modelNumber, String engineType, int enginePower, int tireSize){
@@ -17,11 +19,17 @@ public abstract class Vehicle {
             visitorsCount += 20;
     }
 
-    abstract void addVehicle(int model_number, String engine_type, int engine_power, int tire_size);
+    abstract void addVehicle(Vehicle newVehicle);
 
     abstract void removeVehicle(int model_number);
 
-    abstract void showVehicle();
+    static void showVehicle() {
+        for(Vehicle v : allVehicle) {
+            System.out.println(v.vehicleType + " " + v.modelNumber + " " + v.engineType);
+        }
+    }
 
-    abstract void showVisitorCount();
+    static void showVisitorCount() {
+        System.out.println("Total Number of Visitors: " + visitorsCount);
+    }
 }
