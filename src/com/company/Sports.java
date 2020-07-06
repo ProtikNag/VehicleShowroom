@@ -1,7 +1,7 @@
 package com.company;
 
 public class Sports extends Vehicle{
-    protected boolean turbo;
+    boolean turbo;
 
     Sports(int modelNumber, int enginePower, int tireSize, boolean turbo) {
         super("Sports", modelNumber, "Oil", enginePower, tireSize);
@@ -9,7 +9,6 @@ public class Sports extends Vehicle{
         addVehicle(this);
     }
 
-    @Override
     void addVehicle(Vehicle newVehicle) {
         Vehicle.allVehicle.add(newVehicle);
     }

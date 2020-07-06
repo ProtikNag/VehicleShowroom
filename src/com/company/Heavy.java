@@ -1,7 +1,7 @@
 package com.company;
 
 public class Heavy extends Vehicle{
-    protected int weight;
+    int weight;
 
     Heavy(int modelNumber, int enginePower, int tireSize, int weight) {
         super("Heavy", modelNumber, "Diesel", enginePower, tireSize);
@@ -9,7 +9,6 @@ public class Heavy extends Vehicle{
         addVehicle(this);
     }
 
-    @Override
     void addVehicle(Vehicle newVehicle) {
         Vehicle.allVehicle.add(newVehicle);
     }

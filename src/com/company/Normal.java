@@ -6,7 +6,6 @@ public class Normal extends Vehicle {
         addVehicle(this);
     }
 
-    @Override
     void addVehicle(Vehicle newVehicle) {
         Vehicle.allVehicle.add(newVehicle);
     }

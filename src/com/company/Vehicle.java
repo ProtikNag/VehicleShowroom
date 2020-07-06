@@ -34,6 +34,14 @@ public abstract class Vehicle {
     static void showVehicle() {
         for(Vehicle v : allVehicle) {
             System.out.println(v.vehicleType + " " + v.modelNumber + " " + v.engineType);
+            if(v.vehicleType.equals("Sports")) {
+                Sports sp = (Sports) v;
+                System.out.println(sp.turbo);
+            }
+            if(v.vehicleType.equals("Heavy")) {
+                Heavy hv = (Heavy) v;
+                System.out.println(hv.weight);
+            }
         }
     }
 
